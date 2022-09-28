@@ -1,0 +1,17 @@
+{
+  "systemHeader": {
+      "templateId": "74746c80-8378-11e6-99b1-71ee944cf59f",
+      "systemType": "template",
+      "summaryName": "re-work-in-progress test"
+  },
+  "name": "re-work-in-progress test",
+  "documentId": "a897c4b6-1f4c-4074-8f6f-e6429d6039c7",
+  "components": [
+      {
+          "label": "Test re-work-in-progress",
+          "componentName": "re-work-in-progress",
+          "name": "testReWorkInProgress",
+          "fullWidth": true
+      }
+  ]
+}
