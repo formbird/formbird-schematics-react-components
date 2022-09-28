@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { convertToCustomElement } from '../utils/CustomElementWrapper';
-import { changedDocumentService } from '../services'
+import { keyValueStorageService } from '../services';
+import { Table, Button, Paper, TableRow, TableHead, 
+  TableContainer, TableCell, TableBody } from '@mui/material';
 
 const ReWorkInProgress = ({
   document,
@@ -15,6 +17,7 @@ const ReWorkInProgress = ({
 }) => {
 
   const [value, setValue] = useState();
+  const [rows, setRows] = useState([]);
 
   useEffect(() => {
     if (fieldValue) {
@@ -22,30 +25,65 @@ const ReWorkInProgress = ({
     } else if (componentDefinition.defaultValue) {
       setValue(componentDefinition.defaultValue);
     }
+
+		keyValueStorageService.getDatabase().then(db => {
+        db['keyValues'].toArray().then(wips => {
+          setRows(wips);
+        });
+    });
+		
+		
   }, []);
 
   return (
-    <div>
-      <p>re-work-in-progress works. Please edit src/components/ReWorkInProgress.tsx to make changes</p>
-      <h3>Next Steps</h3>
-      <ul>
-        <li>
-          <a className='md-button' target='_blank' href='https://www.formbird.com/docs/6.Component%20Development/6.1.NG%20Web%20Component%20Development/010-Creating_a_React_Component/#creating-a-production-build'>
-            Build for Production
-          </a>
-        </li>
-        <li>
-          <a className='md-button' target='_blank' href='https://www.formbird.com/docs/6.Component%20Development/6.1.NG%20Web%20Component%20Development/010-Creating_a_React_Component/#tutorials'>
-            Tutorials
-          </a>
-        </li>
-        <li>
-          <a className='md-button' target='_blank' href='https://www.formbird.com/docs/6.Component%20Development/6.1.NG%20Web%20Component%20Development/010-Creating_a_React_Component/#appendices'>
-            Appendices
-          </a>
-        </li>
-      </ul>
-    </div>
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Last Update</TableCell>
+            <TableCell>Key</TableCell>
+            <TableCell align="right">Restore</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.filter(item => item.value).map(({ value, key }: any) => {
+            console.log(value, key);
+            const { document, updated } = value; 
+            if (!document || !updated) {
+              return;
+            }
+            
+            return <TableRow
+              key={value.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              <TableCell align="left">{document.systemHeader.summaryName}</TableCell>
+              <TableCell align="left">{updated.toLocaleDateString()}</TableCell>
+              <TableCell align="left">{key}</TableCell>
+              <TableCell align="right"><Button variant="outlined" onClick={() => {
+                let id;
+                let basePath = '';
+
+                const baseTag = window.document.getElementsByTagName('base')[0];
+                if (baseTag) {
+                    basePath = baseTag.href.split('/')[3] || '';
+                }
+
+                if (document && !document.systemHeader.createdDate) {
+                  id = document.systemHeader.templateId;
+                } else {
+                  id = document.documentId;
+                }
+
+                const initialDataKey = 'initialData:' + id;
+                localStorage.setItem(basePath + initialDataKey, JSON.stringify(document));
+                window.open('form/' + id, '_blank');
+              }}>Restore</Button></TableCell>
+            </TableRow>;
+        })}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 };
 
