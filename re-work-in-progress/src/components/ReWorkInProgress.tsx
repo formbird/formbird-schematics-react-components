@@ -3,6 +3,7 @@ import { convertToCustomElement } from '../utils/CustomElementWrapper';
 import { keyValueStorageService } from '../services';
 import { Table, Button, Paper, TableRow, TableHead, 
   TableContainer, TableCell, TableBody } from '@mui/material';
+import { Restore, Delete } from '@mui/icons-material';
 
 const ReWorkInProgress = ({
   document,
@@ -43,12 +44,11 @@ const ReWorkInProgress = ({
             <TableCell>Name</TableCell>
             <TableCell>Last Update</TableCell>
             <TableCell>Key</TableCell>
-            <TableCell align="right">Restore</TableCell>
+            <TableCell align="right"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.filter(item => item.value).map(({ value, key }: any) => {
-            console.log(value, key);
             const { document, updated } = value; 
             if (!document || !updated) {
               return;
@@ -60,25 +60,34 @@ const ReWorkInProgress = ({
               <TableCell align="left">{document.systemHeader.summaryName}</TableCell>
               <TableCell align="left">{updated.toLocaleDateString()}</TableCell>
               <TableCell align="left">{key}</TableCell>
-              <TableCell align="right"><Button variant="outlined" onClick={() => {
-                let id;
-                let basePath = '';
+              <TableCell align="right">
+                  <Button startIcon={<Restore />} style={{marginRight: 10 }} variant="outlined" onClick={() => {
+                    let id;
+                    let basePath = '';
 
-                const baseTag = window.document.getElementsByTagName('base')[0];
-                if (baseTag) {
-                    basePath = baseTag.href.split('/')[3] || '';
-                }
+                    const baseTag = window.document.getElementsByTagName('base')[0];
+                    if (baseTag) {
+                        basePath = baseTag.href.split('/')[3] || '';
+                    }
 
-                if (document && !document.systemHeader.createdDate) {
-                  id = document.systemHeader.templateId;
-                } else {
-                  id = document.documentId;
-                }
+                    if (document && !document.systemHeader.createdDate) {
+                      id = document.systemHeader.templateId;
+                    } else {
+                      id = document.documentId;
+                    }
 
-                const initialDataKey = 'initialData:' + id;
-                localStorage.setItem(basePath + initialDataKey, JSON.stringify(document));
-                window.open('form/' + id, '_blank');
-              }}>Restore</Button></TableCell>
+                    const initialDataKey = 'initialData:' + id;
+                    localStorage.setItem(basePath + initialDataKey, JSON.stringify(document));
+                    window.open('form/' + id, '_blank');
+                  }}>Restore</Button>
+                  <Button startIcon={<Delete />} variant="outlined" onClick={() => {
+                    const key = `FB-CORE-WIP-${document.documentId}`;
+                    keyValueStorageService.removeItem(key);
+
+                    const wips = rows.filter(item => item.key !== key);
+                    setRows(wips);
+                  }}>Remove</Button>
+              </TableCell>
             </TableRow>;
         })}
         </TableBody>
