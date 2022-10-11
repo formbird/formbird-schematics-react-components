@@ -14636,21 +14636,27 @@ const ReWorkInProgress = ({ document, fieldValue, template, fieldName, formParam
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "left" }, key),
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "right" },
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_10__.default, { startIcon: react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material__WEBPACK_IMPORTED_MODULE_11__.default, null), style: { marginRight: 10 }, variant: "outlined", onClick: () => {
-                                let id;
-                                let basePath = '';
-                                const baseTag = window.document.getElementsByTagName('base')[0];
-                                if (baseTag) {
-                                    basePath = baseTag.href.split('/')[3] || '';
-                                }
-                                if (document && !document.systemHeader.createdDate) {
-                                    id = document.systemHeader.templateId;
-                                }
-                                else {
-                                    id = document.documentId;
-                                }
-                                const initialDataKey = 'initialData:' + id;
-                                localStorage.setItem(basePath + initialDataKey, JSON.stringify(document));
-                                window.open('form/' + id, '_blank');
+                                _services__WEBPACK_IMPORTED_MODULE_2__.keyValueStorageService.getDatabase().then(db => {
+                                    db['keyValues'].toArray().then(latestList => {
+                                        const latest = latestList.find(item => item.key === key);
+                                        const doc = latest.value.document;
+                                        let id;
+                                        let basePath = '';
+                                        const baseTag = window.document.getElementsByTagName('base')[0];
+                                        if (baseTag) {
+                                            basePath = baseTag.href.split('/')[3] || '';
+                                        }
+                                        if (doc && !doc.systemHeader.createdDate) {
+                                            id = doc.systemHeader.templateId;
+                                        }
+                                        else {
+                                            id = doc.documentId;
+                                        }
+                                        const initialDataKey = 'initialData:' + id;
+                                        localStorage.setItem(basePath + initialDataKey, JSON.stringify(doc));
+                                        window.open('form/' + id, '_blank');
+                                    });
+                                });
                             } }, "Restore"),
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_10__.default, { startIcon: react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material__WEBPACK_IMPORTED_MODULE_12__.default, null), variant: "outlined", onClick: () => {
                                 const key = `FB-CORE-WIP-${document.documentId}`;

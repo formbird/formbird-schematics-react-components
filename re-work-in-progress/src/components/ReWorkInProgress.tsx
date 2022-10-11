@@ -62,23 +62,30 @@ const ReWorkInProgress = ({
               <TableCell align="left">{key}</TableCell>
               <TableCell align="right">
                   <Button startIcon={<Restore />} style={{marginRight: 10 }} variant="outlined" onClick={() => {
-                    let id;
-                    let basePath = '';
+                    keyValueStorageService.getDatabase().then(db => {
+                      db['keyValues'].toArray().then(latestList => {
+                        const latest = latestList.find(item => item.key === key);
+                        const doc = latest.value.document;
+                        
+                        let id;
+                        let basePath = '';
 
-                    const baseTag = window.document.getElementsByTagName('base')[0];
-                    if (baseTag) {
-                        basePath = baseTag.href.split('/')[3] || '';
-                    }
+                        const baseTag = window.document.getElementsByTagName('base')[0];
+                        if (baseTag) {
+                            basePath = baseTag.href.split('/')[3] || '';
+                        }
 
-                    if (document && !document.systemHeader.createdDate) {
-                      id = document.systemHeader.templateId;
-                    } else {
-                      id = document.documentId;
-                    }
+                        if (doc && !doc.systemHeader.createdDate) {
+                          id = doc.systemHeader.templateId;
+                        } else {
+                          id = doc.documentId;
+                        }
 
-                    const initialDataKey = 'initialData:' + id;
-                    localStorage.setItem(basePath + initialDataKey, JSON.stringify(document));
-                    window.open('form/' + id, '_blank');
+                        const initialDataKey = 'initialData:' + id;
+                        localStorage.setItem(basePath + initialDataKey, JSON.stringify(doc));
+                        window.open('form/' + id, '_blank');
+                      });
+                    });
                   }}>Restore</Button>
                   <Button startIcon={<Delete />} variant="outlined" onClick={() => {
                     const key = `FB-CORE-WIP-${document.documentId}`;
