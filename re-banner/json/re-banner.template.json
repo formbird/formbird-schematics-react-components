@@ -1,0 +1,17 @@
+{
+  "systemHeader": {
+      "templateId": "74746c80-8378-11e6-99b1-71ee944cf59f",
+      "systemType": "template",
+      "summaryName": "re-banner test"
+  },
+  "name": "re-banner test",
+  "documentId": "6c388fea-7360-4a5a-af22-ccffb98a0eeb",
+  "components": [
+      {
+          "label": "Test re-banner",
+          "componentName": "re-banner",
+          "name": "testReBanner",
+          "fullWidth": true
+      }
+  ]
+}
