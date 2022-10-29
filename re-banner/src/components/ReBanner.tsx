@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {FormComponent, ComponentDefinition} from '@formbird/types';
+import './banner-style.css';
 import { convertToCustomElement } from '../utils/CustomElementWrapper';
 
 interface ReBannerComponentDefinition extends ComponentDefinition {
@@ -29,26 +30,13 @@ const ReBannerComponent = ({
   }, []);
 
   return (
-    <table 
-    style={{borderCollapse: "separate", borderSpacing: "10px 0px"}} 
-    >
-     <tbody>
-      <tr>
-        <th 
-        style={{"textAlign": "left"}}
-        >
-          <img src='/images/formbird-logo-small.png' />
-        </th>
-        <th 
-        style={{"textAlign": "left"}}
-        >
-          <div 
-          style={{"color":"DimGray", "fontWeight":"bold", "fontSize":"1.5em"}}
-          >{componentDefinition.text}</div>
-        </th>
-      </tr>
-      </tbody> 
-    </table> 
+    <div class='well well-sm' style={
+      {
+        fontWeight: componentDefinition.fontWeight || "bold", 
+        background: componentDefinition.backgroundColor || '#1E90FF', 
+        color: componentDefinition.fontColor || "white"
+      }}
+    >{componentDefinition.text}</div>
   );
 };
 
