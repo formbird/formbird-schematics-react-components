@@ -14621,19 +14621,22 @@ const ReWorkInProgress = ({ document, fieldValue, template, fieldName, formParam
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_5__.default, { sx: { minWidth: 650 }, "aria-label": "simple table" },
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__.default, null,
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.default, null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, null, "Name"),
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, null, "Last Update"),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, null, "Key"),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, null, "Name"),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, null, "Document Id"),
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "right" }))),
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__.default, null, rows.filter(item => item.value).map(({ value, key }) => {
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__.default, null, rows
+                .filter(item => item.value)
+                .sort((item1, item2) => item2.value.updated - item1.value.updated)
+                .map(({ value, key }) => {
                 const { document, updated } = value;
                 if (!document || !updated) {
                     return;
                 }
                 return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.default, { key: value.name, sx: { '&:last-child td, &:last-child th': { border: 0 } } },
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "left" }, updated.toISOString()),
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "left" }, document.systemHeader.summaryName),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "left" }, updated.toLocaleDateString()),
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "left" }, key),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "left" }, key.replace('FB-CORE-WIP-', '')),
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { align: "right" },
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_10__.default, { startIcon: react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material__WEBPACK_IMPORTED_MODULE_11__.default, null), style: { marginRight: 10 }, variant: "outlined", onClick: () => {
                                 _services__WEBPACK_IMPORTED_MODULE_2__.keyValueStorageService.getDatabase().then(db => {

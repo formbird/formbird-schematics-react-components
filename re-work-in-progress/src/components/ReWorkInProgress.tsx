@@ -41,14 +41,17 @@ const ReWorkInProgress = ({
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
             <TableCell>Last Update</TableCell>
-            <TableCell>Key</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Document Id</TableCell>
             <TableCell align="right"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.filter(item => item.value).map(({ value, key }: any) => {
+          {rows
+            .filter(item => item.value)
+            .sort((item1: any, item2: any) => item2.value.updated - item1.value.updated)
+            .map(({ value, key }: any) => {
             const { document, updated } = value; 
             if (!document || !updated) {
               return;
@@ -57,9 +60,9 @@ const ReWorkInProgress = ({
             return <TableRow
               key={value.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              <TableCell align="left">{updated.toISOString()}</TableCell>
               <TableCell align="left">{document.systemHeader.summaryName}</TableCell>
-              <TableCell align="left">{updated.toLocaleDateString()}</TableCell>
-              <TableCell align="left">{key}</TableCell>
+              <TableCell align="left">{key.replace('FB-CORE-WIP-', '')}</TableCell>
               <TableCell align="right">
                   <Button startIcon={<Restore />} style={{marginRight: 10 }} variant="outlined" onClick={() => {
                     keyValueStorageService.getDatabase().then(db => {
