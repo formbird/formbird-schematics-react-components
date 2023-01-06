@@ -1,0 +1,17 @@
+{
+  "systemHeader": {
+      "templateId": "74746c80-8378-11e6-99b1-71ee944cf59f",
+      "systemType": "template",
+      "summaryName": "sc-template-editor-react test"
+  },
+  "name": "sc-template-editor-react test",
+  "documentId": "0bcb340f-5178-4429-a8a7-01dc24a3fffc",
+  "components": [
+      {
+          "label": "Test sc-template-editor-react",
+          "componentName": "sc-template-editor-react",
+          "name": "testScTemplateEditorReact",
+          "fullWidth": true
+      }
+  ]
+}
