@@ -36,13 +36,20 @@ const components = [
         }
     },
     {
-        name: 'sc-panel-collapse',
+        name: 'sc-static-html',
+        secondary: 'wrapped',
         icon: Subtitles,
         componentDefinition : {
-            wrapAction: 'open'
+          fullWidth: true,
+          wrapClass: "panel-account",
+          wrapHtmlType: "wrap",
+          wrapAction: "open"
         },
-        additional: {
-            wrapAction: 'close'
+        additionalComponentDefinition: {
+          fullWidth: true,
+          wrapClass: "panel-account",
+          wrapHtmlType: "wrap",
+          wrapAction: "close"
         }
     }
 ];
@@ -63,7 +70,7 @@ export interface DraggableComponentProps {
   
     const [{ isDragging }, drag] = useDrag(() => ({
       type: 'component',
-      item: { name },
+      item: item,
       end: (item, monitor) => {
         const dropResult = monitor.getDropResult<DropResult>()
         if (item && dropResult) {
@@ -78,19 +85,18 @@ export interface DraggableComponentProps {
   
     const opacity = isDragging ? 0.4 : 1;
     return (
-      <ListItem ref={drag} style={{ opacity }} data-testid={`box`}>
+      <ListItem ref={drag} style={{ opacity, fontSize: 12 }} data-testid={`box`}>
         <ListItemAvatar>
               <Avatar>
                 <Icon />
               </Avatar>
             </ListItemAvatar>
-        <ListItemText primary={name}/>
+        <ListItemText primary={name} secondary={item.secondary}/>
       </ListItem>
     )
   }
 
 const ComponentWidgets = ({onDrop}) => {
-    // return (<DraggableComponent name={item.name} item={item} onDrop={onDrop}/>);
     return (
         <List>
             {

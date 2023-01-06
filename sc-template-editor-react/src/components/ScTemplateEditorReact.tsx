@@ -84,95 +84,66 @@ const ScTemplateEditorReact = ({
 
   const handleDrop = (item) => {
     const compDef = {
+      ...item.componentDefinition,
       "componentName": item.name,
       'name': 'name' + components.length,
       'label': 'test' + components.length
     };
 
     components.push(compDef);
+
+    if (item.additionalComponentDefinition) {
+      const compDef2 = {
+        ...item.additionalComponentDefinition,
+        "componentName": item.name,
+        'name': compDef.name,
+        'label': compDef.label
+      };
+
+      components.push(compDef2);
+    }
+
     setComponents(components);
     setComponentsToView(components);
   };
 
   return (
     <>
-    <DndProvider backend={HTML5Backend}>
-      <Dialog open={open} onClose={handleClose} style={{ width: 600, height: 300 }}>
-        <DialogTitle>Add Component</DialogTitle>
-        <DialogContent>
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Component</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              label="Component"
-            >
-              <MenuItem value={'sc-text-box'}>sc-text-box</MenuItem>
-              <MenuItem value={'sc-static-html'}>sc-static-html</MenuItem>
-              <MenuItem value={'sc-date-time'}>sc-date-time</MenuItem>
-            </Select>
-          </FormControl>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="name"
-            type="email"
-            fullWidth
-            variant="standard"
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => {
-            const compDef = {
-              "componentName": 'sc-text-box',
-              'name': 'name' + components.length,
-              'label': 'test' + components.length
-            };
-
-            components.push(compDef);
-            setComponents(components);
-            setComponentsToView();
-
-            handleClose();
-          }}>Add Component</Button>
-          <Button onClick={handleClose}>Cancel</Button>
-        </DialogActions>
-      </Dialog>
-      <div className="container">
-        <div className="item-0">
-        <Tabs value={tabValue} onChange={(event, newTabValue) => {
-          setTabValue(newTabValue);
-        }}>
-          <Tab label="Add New" />
-          <Tab label="Components" />
-        </Tabs>
-        {
-          tabValue === 0 && 
-          <ComponentWidgets onDrop={handleDrop}/>
-        } 
-        {
-          tabValue === 1 && 
-          <>
-            <Button variant="text">Edit</Button>
-            <Button variant="text">Remove</Button>
-            <ComponentList components={components} 
-            onDrag={(newComponents) => {
-              console.log(newComponents);
-              setComponents(newComponents);
-              setComponentsToView(newComponents);
-            }}
-            onSelect={componentDefinition => {
-              broadcastService.broadcast('editorSelected', componentDefinition.name);
-            }}  
-            />
-          </>
-        } 
+      <DndProvider backend={HTML5Backend}>
+        <div className="container">
+          <div className="item-0">
+            <Tabs value={tabValue} onChange={(event, newTabValue) => {
+              setTabValue(newTabValue);
+            }}>
+              <Tab label="Widgets" />
+              <Tab label="Components" />
+            </Tabs>
+            {
+              tabValue === 0 &&
+              <ComponentWidgets onDrop={handleDrop} />
+            }
+            {
+              tabValue === 1 &&
+              <>
+                <Button variant="text">Edit</Button>
+                <Button variant="text">Remove</Button>
+                <ComponentList components={components}
+                  onDrag={(newComponents) => {
+                    console.log(newComponents);
+                    setComponents(newComponents);
+                    setComponentsToView(newComponents);
+                  }}
+                  onSelect={componentDefinition => {
+                    broadcastService.broadcast('editorSelected', componentDefinition.name);
+                  }}
+                />
+              </>
+            }
+          </div>
+          <div className="item-1 editor-view">
+            <TemplateView templateRef={templateRef} />
+          </div>
         </div>
-        <div className="item-1 editor-view">
-         <TemplateView templateRef={templateRef}/>
-        </div>
-      </div>
       </DndProvider>
     </>
   );

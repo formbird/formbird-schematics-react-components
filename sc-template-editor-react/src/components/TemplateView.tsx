@@ -12,15 +12,15 @@ const TemplateView = ({templateRef}) => {
       }));
     
       const isActive = canDrop && isOver;
-      let border = '1px solid #222';
+      let border = '1px dashed grey';
       if (isActive) {
-        border = '1px dashed darkgreen';
+        border = '1px solid grey';
       } else if (canDrop) {
-        border = '1px solid darkkhaki';
+        border = '1px dashed black';
       }
 
     return <>
-      <div ref={drop} style={{ height: '100vh', width: '100%', border }}>
+      <div ref={drop} style={{ height: '100vh', border }}>
           <div ref={templateRef}></div>
       </div>
     </>;
