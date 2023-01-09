@@ -42,7 +42,179 @@ const ScTemplateEditorReact = ({
   const [selected, setSelected] = React.useState<string[]>([]);
   const [tabValue, setTabValue] = useState(0);
   const templateRef = useRef(null);
-  const [components, setComponents] = useState([]);
+  const [components, setComponents] = useState([
+// {
+//     "label": "Application Id:",
+//     "name": "applicationId",
+//     "componentName": "sc-text-box",
+//     "fullWidth": true
+// },
+// {
+//     "label": "Tag Application Id:",
+//     "name": "tagApplicationId",
+//     "componentName": "sc-text-box",
+//     "fullWidth": true
+// },
+// {
+//     "label": "Branch Application Id:",
+//     "name": "branchApplicationId",
+//     "componentName": "sc-text-box",
+//     "fullWidth": true
+// },
+// {
+//     "name": "panelStyleAccount",
+//     "componentName": "sc-static-html",
+//     "html": "<style> .panel-account {background:#fffff;border:1px black;box-shadow: 10px 10px 5px grey;} .panel-account > .panel-heading {background:#6a99f4;color:white;font-size:1.25em;font-weight:200;padding:1px 1px 1px 10px} .control-label{color:#6a99f4 !important} .cww-icon {height:auto;width:150px;margin-left:10px;float:right}</style>",
+//     "fullWidth": true
+// },
+// {
+//     "name": "panelDetails",
+//     "componentName": "sc-static-html",
+//     "visible": true,
+//     "label": "User Account",
+//     "wrapClass": "panel-account",
+//     "wrapHtmlType": "wrap",
+//     "wrapAction": "open",
+//     "fullWidth": true
+// },
+// {
+//     "fullWidth": true,
+//     "componentName": "sc-static-html",
+//     "html": "<img src='/api/getFile/cww-reference-20-companyLogo1.png' class = 'cww-icon hidden-xs'</img>"
+// },
+// {
+//     "name": "appTags",
+//     "componentName": "sc-static-value",
+//     "visible": false,
+//     "value": [
+//         "cww",
+//         "system",
+//         "account"
+//     ]
+// },
+// {
+//     "componentName": "sc-static-value",
+//     "name": "provider",
+//     "visible": false,
+//     "value": "local"
+// },
+// {
+//     "componentName": "sc-party",
+//     "fullWidth": true,
+//     "mandatoryFields": [
+//         "firstName",
+//         "surname"
+//     ],
+//     "detail": "",
+//     "label": "Name",
+//     "mandatory": true,
+//     "name": "usersName"
+// },
+// {
+//     "componentName": "sc-related-document",
+//     "label": "Intray Name",
+//     "mandatory": false,
+//     "name": "intraysRel",
+//     "singleSelection": true,
+//     "filter": "{'query': {'bool':{'filter':[{'term':{'appTags':'cww'}},{'term':{'appTags':'resource'}},{'term':{'systemHeader.systemType':'document'}},{'term':{'status':'Active'}},{'term':{'type':'Intray'}}]}}}",
+//     "trigger": {
+//         "data": null,
+//         "postSave": false
+//     },
+//     "relatedFields": {
+//         "department": "department",
+//         "group": "group",
+//         "company": "company",
+//         "team": "team"
+//     },
+//     "showDropDown": true,
+//     "detail": "",
+//     "visible": true,
+//     "fullWidth": false
+// },
+// {
+//     "componentName": "sc-email",
+//     "name": "email",
+//     "mandatory": true,
+//     "label": "Email"
+// },
+// {
+//     "componentName": "sc-static-html",
+//     "HTML": " ",
+//     "fullWidth": true
+// },
+// {
+//     "componentName": "ft-password-entry",
+//     "name": "password",
+//     "label": "Enter or Change Password (password)",
+//     "type": "Password"
+// },
+// {
+//     "componentName": "sc-static-html",
+//     "fullWidth": true,
+//     "HTML": " "
+// },
+// {
+//     "componentName": "sc-check-box",
+//     "mandatory": false,
+//     "label": "Verified",
+//     "name": "verified"
+// },
+// {
+//     "componentName": "sc-text-box",
+//     "name": "defaultURL",
+//     "label": "defaultURL",
+//     "mandatory": true
+// },
+// {
+//     "componentName": "sc-related-document",
+//     "name": "securityGroupsRel",
+//     "label": "Security Access Group",
+//     "mandatory": true,
+//     "fullWidth": true,
+//     "disableLink": true,
+//     "relatedFields": {
+//         "rights": "rights"
+//     },
+//     "trigger": {
+//         "data": null,
+//         "postSave": false
+//     },
+//     "filter": "{'query':{'bool':{'filter':[{'term':{'appTags':'cww'}},{'term':{'appTags':'key'}},{'term':{'systemHeader.systemType':'document'}}]}}}",
+//     "showDropDown": true
+// },
+// {
+//     "componentName": "sc-drop-down",
+//     "name": "accountRole",
+//     "label": "Account Role",
+//     "mandatory": true,
+//     "detail": "",
+//     "dropDownList": [
+//         "WM User",
+//         "WM Supervisor",
+//         "WM CSE",
+//         "WM Super User"
+//     ]
+// },
+// {
+//     "componentName": "sc-static-html",
+//     "name": "panelDetails",
+//     "fullWidth": true,
+//     "wrapClass": "panel-account",
+//     "wrapHtmlType": "wrap",
+//     "wrapAction": "close"
+// },
+// {
+//     "componentName": "ft-uploader",
+//     "name": "uploadertest",
+//     "label": "Upload (ft-uploader)"
+// },
+// {
+//     "componentName": "sc-uploader",
+//     "name": "uploadertestSC",
+//     "label": "Upload (sc-uploader)"
+// }
+  ]);
   const [open, setOpen] = React.useState(false);
 
   const setComponentsToView = (newComponents?) => {
