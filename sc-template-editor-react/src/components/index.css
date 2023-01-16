@@ -3,7 +3,7 @@
 }
 
 .item-0 {
-	width: 300px;
+	width: 400px;
 }
 
 .item-2 {
@@ -12,7 +12,7 @@
 
 .editor-view {
 	overflow: scroll;
-	width: 90%;
+	max-width: 80%;
 }
 
 .item-1 {
@@ -20,14 +20,19 @@
 	flex-shrink: 0;
 }
 
-.editor-view .ft-dynamic-container:hover {
-    border: 1px dashed #71b8c6;
-}
-
-.editor-view .ft-dynamic-container-full-width:hover {
-    border: 1px dashed #71b8c6;
-}
-
 .editor-view .editorSelected {
-	border: 1px dashed #0f4d7a;
+	border: 1px solid #0f4d7a;
+}
+
+.selected {
+	background-color: #b8d8ee !important;
+}
+
+.wrapItem {
+	background-color: #8bb5ad;
+}
+
+.componentList {
+	height: 100vh;
+	overflow-y: scroll;
 }

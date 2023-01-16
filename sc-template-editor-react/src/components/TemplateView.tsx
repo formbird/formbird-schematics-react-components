@@ -20,7 +20,7 @@ const TemplateView = ({templateRef}) => {
       }
 
     return <>
-      <div ref={drop} style={{ height: '100vh', border }}>
+      <div ref={drop} style={{ height: '80vh', border }}>
           <div ref={templateRef}></div>
       </div>
     </>;
