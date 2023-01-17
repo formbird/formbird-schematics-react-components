@@ -117,7 +117,7 @@ const ScTemplateEditorReact = ({
 
   return (
     <>{
-      error || 
+      error ||
       <DndProvider backend={HTML5Backend}>
         <div className="container">
           <div className="item-0">
@@ -150,7 +150,7 @@ const ScTemplateEditorReact = ({
                     }, newComponents);
                   }}
                   onSelect={componentDefinition => {
-                    broadcastService.broadcast('editorSelected', componentDefinition.name);
+                    broadcastService.broadcast('updateFormTemplate', { editorSelected: componentDefinition.name });
                   }}
                   onUpdate={(newComponents) => {
                     setComponents(newComponents);
@@ -175,7 +175,7 @@ const ScTemplateEditorReact = ({
           </div>
         </div>
       </DndProvider>
-      }
+    }
     </>
   );
 };

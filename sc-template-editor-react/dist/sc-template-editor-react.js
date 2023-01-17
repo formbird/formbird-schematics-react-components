@@ -17469,48 +17469,6 @@ function useSlotProps(parameters) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/icons-material/esm/CalendarMonth.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@mui/icons-material/esm/CalendarMonth.js ***!
-  \***************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/material/utils/createSvgIcon.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__.default)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
-  d: "M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"
-}), 'CalendarMonth'));
-
-/***/ }),
-
-/***/ "./node_modules/@mui/icons-material/esm/CheckBox.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@mui/icons-material/esm/CheckBox.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/material/utils/createSvgIcon.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__.default)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
-  d: "M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-}), 'CheckBox'));
-
-/***/ }),
-
 /***/ "./node_modules/@mui/icons-material/esm/Delete.js":
 /*!********************************************************!*\
   !*** ./node_modules/@mui/icons-material/esm/Delete.js ***!
@@ -17529,27 +17487,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__.default)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
   d: "M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
 }), 'Delete'));
-
-/***/ }),
-
-/***/ "./node_modules/@mui/icons-material/esm/DriveFileRenameOutline.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@mui/icons-material/esm/DriveFileRenameOutline.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/material/utils/createSvgIcon.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__.default)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
-  d: "M18.41 5.8 17.2 4.59c-.78-.78-2.05-.78-2.83 0l-2.68 2.68L3 15.96V20h4.04l8.74-8.74 2.63-2.63c.79-.78.79-2.05 0-2.83zM6.21 18H5v-1.21l8.66-8.66 1.21 1.21L6.21 18zM11 20l4-4h6v4H11z"
-}), 'DriveFileRenameOutline'));
 
 /***/ }),
 
@@ -17574,27 +17511,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/@mui/icons-material/esm/Html.js":
-/*!******************************************************!*\
-  !*** ./node_modules/@mui/icons-material/esm/Html.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/material/utils/createSvgIcon.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__.default)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
-  d: "M3.5 9H5v6H3.5v-2.5h-2V15H0V9h1.5v2h2V9zm14 0H13c-.55 0-1 .45-1 1v5h1.5v-4.5h1V14H16v-3.51h1V15h1.5v-5c0-.55-.45-1-1-1zM11 9H6v1.5h1.75V15h1.5v-4.5H11V9zm13 6v-1.5h-2.5V9H20v6h4z"
-}), 'Html'));
-
-/***/ }),
-
 /***/ "./node_modules/@mui/icons-material/esm/Inbox.js":
 /*!*******************************************************!*\
   !*** ./node_modules/@mui/icons-material/esm/Inbox.js ***!
@@ -17613,27 +17529,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__.default)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
   d: "M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"
 }), 'Inbox'));
-
-/***/ }),
-
-/***/ "./node_modules/@mui/icons-material/esm/Subtitles.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/@mui/icons-material/esm/Subtitles.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/material/utils/createSvgIcon.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__.default)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
-  d: "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 12h4v2H4v-2zm10 6H4v-2h10v2zm6 0h-4v-2h4v2zm0-4H10v-2h10v2z"
-}), 'Subtitles'));
 
 /***/ }),
 
@@ -76970,144 +76865,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItem/ListItem.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemAvatar/ListItemAvatar.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Avatar/Avatar.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemText/ListItemText.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/List/List.js");
-/* harmony import */ var react_dnd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-dnd */ "./node_modules/react-dnd/dist/esm/hooks/useDrag/useDrag.js");
-/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/DriveFileRenameOutline.js");
-/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/CalendarMonth.js");
-/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/CheckBox.js");
-/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/Html.js");
-/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/Subtitles.js");
-/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/Inbox.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItem/ListItem.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemAvatar/ListItemAvatar.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Avatar/Avatar.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItemText/ListItemText.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/List/List.js");
+/* harmony import */ var react_dnd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dnd */ "./node_modules/react-dnd/dist/esm/hooks/useDrag/useDrag.js");
+/* harmony import */ var _mui_material_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/material/utils */ "./node_modules/@mui/material/utils/createSvgIcon.js");
+/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/Inbox.js");
 
 
 
 
-const components = [
-    {
-        name: 'sc-text-box',
-        icon: _mui_icons_material__WEBPACK_IMPORTED_MODULE_1__.default,
-        componentDefinition: {}
-    },
-    {
-        name: 'sc-date-time',
-        icon: _mui_icons_material__WEBPACK_IMPORTED_MODULE_2__.default,
-        componentDefinition: {}
-    },
-    {
-        name: 'sc-check-box',
-        icon: _mui_icons_material__WEBPACK_IMPORTED_MODULE_3__.default,
-        componentDefinition: {}
-    },
-    {
-        name: 'sc-static-html',
-        icon: _mui_icons_material__WEBPACK_IMPORTED_MODULE_4__.default,
-        componentDefinition: {
-            html: '<p>static html</p>'
-        }
-    },
-    {
-        name: "sc-note-box",
-        componentDefintion: {
-            "componentName": "sc-note-box",
-            "fullWidth": true,
-            "label": "Report Description",
-            "name": "headingText",
-            "noteBoxRows": 1,
-            "defaultValue": "Number of Bursts and Leaks by priority",
-            "enabled": false
-        }
-    },
-    {
-        name: "sc-drop-down",
-        componentDefinition: {
-            "componentName": "sc-drop-down",
-            "fullWidth": false,
-            "label": "Pre-Set Times",
-            "name": "reportTime",
-            "mandatory": false,
-            "dropDownList": [
-                "Current Month To Date",
-                "Previous Months",
-                "Yesterday",
-                "Last Week",
-                "Last Month",
-                "Last Calendar Year",
-                "Last 7 Days",
-                "Current Financial Year To Date",
-                "Previous Financial Year",
-                "Last (rolling) 12 months"
-            ],
-            "detail": "",
-            "disableSave": true
-        }
-    }, {
-        "name": "sc-numeric",
-        componentDefinition: {
-            "componentName": "sc-numeric",
-            "label": "Fiscal Year",
-            "name": "fiscalYearSelector",
-            "integerValueOnly": true,
-            "min": 2018,
-            "disableSave": true
-        }
-    },
-    {
-        name: 'sc-static-html',
-        secondary: 'wrapped',
-        icon: _mui_icons_material__WEBPACK_IMPORTED_MODULE_5__.default,
-        componentDefinition: {
-            fullWidth: true,
-            wrapClass: "panel-account",
-            wrapHtmlType: "wrap",
-            wrapAction: "open"
-        },
-        additionalComponentDefinition: {
-            fullWidth: true,
-            wrapClass: "panel-account",
-            wrapHtmlType: "wrap",
-            wrapAction: "close"
-        }
-    },
-    {
-        name: "sc-button",
-        componentDefintion: {
-            "name": "cmdRunReport",
-            "componentName": "sc-button",
-            "label": " ",
-            "btnLabel": "Run Report",
-            "caption": "Run Report",
-            "style": "btn-link btnB",
-            "fullWidth": true
-        }
-    },
-    {
-        name: 'sc-panel-collapse',
-        componentDefinition: {
-            "componentName": "sc-panel-collapse",
-            "fullWidth": true,
-            "wrapAction": "open",
-            "wrapHtmlType": "wrap",
-            "wrapClass": "panel-report",
-            "visible": true,
-            "label": "Contracted Performance Targets",
-            "wrapPanelCollapsed": true
-        },
-        additionalComponentDefinition: {
-            "componentName": "sc-panel-collapse",
-            "fullWidth": true,
-            "wrapAction": "close",
-            "wrapHtmlType": "wrap",
-            "wrapClass": "panel-report"
-        }
-    }
-];
+
+const anyWindow = window;
+const searchService = anyWindow.FormbirdServiceInjector.get('SearchService');
+// const components = [
+//   {
+//     name: 'sc-text-box',
+//     icon: DriveFileRenameOutline,
+//     componentDefinition: {}
+//   },
+//   {
+//     name: 'sc-date-time',
+//     icon: CalendarMonth,
+//     componentDefinition: {}
+//   },
+//   {
+//     name: 'sc-check-box',
+//     icon: CheckBox,
+//     componentDefinition: {}
+//   },
+//   {
+//     name: 'sc-static-html',
+//     icon: Html,
+//     componentDefinition: {
+//       html: '<p>static html</p>'
+//     }
+//   },
+//   {
+//     name: "sc-note-box",
+//     componentDefintion: {
+//       "componentName": "sc-note-box",
+//       "fullWidth": true,
+//       "label": "Report Description",
+//       "name": "headingText",
+//       "noteBoxRows": 1,
+//       "defaultValue": "Number of Bursts and Leaks by priority",
+//       "enabled": false
+//     }
+//   },
+//   {
+//     name: "sc-drop-down",
+//     componentDefinition: {
+//       "componentName": "sc-drop-down",
+//       "fullWidth": false,
+//       "label": "Pre-Set Times",
+//       "name": "reportTime",
+//       "mandatory": false,
+//       "dropDownList": [
+//         "Current Month To Date",
+//         "Previous Months",
+//         "Yesterday",
+//         "Last Week",
+//         "Last Month",
+//         "Last Calendar Year",
+//         "Last 7 Days",
+//         "Current Financial Year To Date",
+//         "Previous Financial Year",
+//         "Last (rolling) 12 months"
+//       ],
+//       "detail": "",
+//       "disableSave": true
+//     }
+//   }, {
+//     "name": "sc-numeric",
+//     componentDefinition: {
+//       "componentName": "sc-numeric",
+//       "label": "Fiscal Year",
+//       "name": "fiscalYearSelector",
+//       "integerValueOnly": true,
+//       "min": 2018,
+//       "disableSave": true
+//     }
+//   },
+//   {
+//     name: 'sc-static-html',
+//     secondary: 'wrapped',
+//     icon: Subtitles,
+//     componentDefinition: {
+//       fullWidth: true,
+//       wrapClass: "panel-account",
+//       wrapHtmlType: "wrap",
+//       wrapAction: "open"
+//     },
+//     additionalComponentDefinition: {
+//       fullWidth: true,
+//       wrapClass: "panel-account",
+//       wrapHtmlType: "wrap",
+//       wrapAction: "close"
+//     }
+//   },
+//   {
+//     name: "sc-button",
+//     componentDefintion: {
+//       "name": "cmdRunReport",
+//       "componentName": "sc-button",
+//       "label": " ",
+//       "btnLabel": "Run Report",
+//       "caption": "Run Report",
+//       "style": "btn-link btnB",
+//       "fullWidth": true
+//     }
+//   },
+//   {
+//     name: 'sc-panel-collapse',
+//     componentDefinition: {
+//       "componentName": "sc-panel-collapse",
+//       "fullWidth": true,
+//       "wrapAction": "open",
+//       "wrapHtmlType": "wrap",
+//       "wrapClass": "panel-report",
+//       "visible": true,
+//       "label": "Contracted Performance Targets",
+//       "wrapPanelCollapsed": true
+//     },
+//     additionalComponentDefinition: {
+//       "componentName": "sc-panel-collapse",
+//       "fullWidth": true,
+//       "wrapAction": "close",
+//       "wrapHtmlType": "wrap",
+//       "wrapClass": "panel-report"
+//     }
+//   }
+// ];
+const SvgIcon = (path) => (0,_mui_material_utils__WEBPACK_IMPORTED_MODULE_1__.default)(react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", { d: path }), 'Home');
 const DraggableComponent = ({ name, onDrop, item }) => {
-    let Icon = item.icon ? item.icon : _mui_icons_material__WEBPACK_IMPORTED_MODULE_6__.default;
-    const [{ isDragging }, drag] = (0,react_dnd__WEBPACK_IMPORTED_MODULE_7__.useDrag)(() => ({
+    let Icon = item.icon ? item.icon : _mui_icons_material__WEBPACK_IMPORTED_MODULE_2__.default;
+    const [{ isDragging }, drag] = (0,react_dnd__WEBPACK_IMPORTED_MODULE_3__.useDrag)(() => ({
         type: 'component',
         item: item,
         end: (item, monitor) => {
@@ -77122,14 +77017,48 @@ const DraggableComponent = ({ name, onDrop, item }) => {
         }),
     }));
     const opacity = isDragging ? 0.4 : 1;
-    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { ref: drag, style: { opacity, fontSize: 12 }, "data-testid": `box` },
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__.default, null,
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_10__.default, null,
+    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_4__.default, { ref: drag, style: { opacity, fontSize: 12 }, "data-testid": `box` },
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_5__.default, null,
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_6__.default, null,
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, null))),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__.default, { primary: name, secondary: item.secondary })));
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.default, { primary: name, secondary: item.secondary })));
 };
 const ComponentWidgets = ({ onDrop }) => {
-    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_12__.default, null, components.map(item => react__WEBPACK_IMPORTED_MODULE_0___default().createElement(DraggableComponent, { name: item.name, item: item, onDrop: onDrop }))));
+    const [components, setComponents] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+        const options = {
+            filter: {
+                "query": {
+                    "bool": {
+                        "must": [
+                            {
+                                "term": {
+                                    "systemHeader.systemType": "component"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            sort: { "name": { "order": "asc" } }
+        };
+        searchService.search(options).then(result => {
+            const componentResults = result.data.hits.hits.map(res => res._source);
+            const compWidgets = [];
+            for (const comp of componentResults) {
+                if (comp.name) {
+                    compWidgets.push({
+                        name: comp.name,
+                        componentDefinition: Object.assign({ componentName: comp.name }, comp.componentDefinition),
+                        additionalComponentDefinition: comp.additionalComponentDefinition,
+                        icon: SvgIcon(comp.svgIcon || 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z')
+                    });
+                }
+            }
+            setComponents(compWidgets);
+        });
+    }, []);
+    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__.default, { className: 'componentList' }, components.map(item => react__WEBPACK_IMPORTED_MODULE_0___default().createElement(DraggableComponent, { name: item.name, item: item, onDrop: onDrop }))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ComponentWidgets);
 
@@ -77269,7 +77198,7 @@ const ScTemplateEditorReact = ({ document, fieldValue, template, fieldName, form
                                         key: compKey
                                     }, newComponents);
                                 }, onSelect: componentDefinition => {
-                                    broadcastService.broadcast('editorSelected', componentDefinition.name);
+                                    broadcastService.broadcast('updateFormTemplate', { editorSelected: componentDefinition.name });
                                 }, onUpdate: (newComponents) => {
                                     setComponents(newComponents);
                                     setComponentsToView(newComponents);
@@ -77327,7 +77256,7 @@ const TemplateView = ({ templateRef }) => {
         border = '1px dashed black';
     }
     return react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { ref: drop, style: { height: '80vh', border } },
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { ref: drop, style: { height: '100vh', overflow: 'auto', border } },
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { ref: templateRef })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TemplateView);
