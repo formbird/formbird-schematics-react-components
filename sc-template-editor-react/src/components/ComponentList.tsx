@@ -4,7 +4,7 @@ import {
   DragDropContext,
   Droppable
 } from 'react-beautiful-dnd';
-import { ListItem, ListItemAvatar, ListItemText, Avatar } from '@mui/material';
+import { ListItem, ListItemAvatar, ListItemText, Avatar, DialogContentText, DialogTitle } from '@mui/material';
 import { Inbox, Delete, Edit } from '@mui/icons-material';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -13,7 +13,6 @@ import DialogContent from '@mui/material/DialogContent';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import DialogTitle from '@mui/material/DialogTitle';
 import { TextField, Checkbox, FormGroup, FormControlLabel, Box } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import AceEditor from "react-ace";
@@ -71,6 +70,8 @@ const DraggableComponentList = ({ components, onDrag, onSelect, onUpdate }: any)
   const [label, setLabel] = useState('');
   const [fullWidth, setFullWidth] = useState(false);
 
+  const [toDelete, setToDelete] = useState(null);
+
   const reorder = (list: any, startIndex: number, endIndex: number) => {
     const result = Array.from(list);
     const [removed] = result.splice(startIndex, 1);
@@ -95,6 +96,34 @@ const DraggableComponentList = ({ components, onDrag, onSelect, onUpdate }: any)
 
   return (
     <>
+    <Dialog
+        open={toDelete !== null}
+        onClose={() => {
+          setToDelete(null);
+        }}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">Delete</DialogTitle>
+        <DialogContent>
+          <DialogContentText>Delete {items[toDelete]?.name}?</DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => {
+            const newItems = [...items.filter((item, index) => index !== toDelete)];
+            setItems(newItems);
+            onUpdate(newItems);
+            setToDelete(null);
+          }} color="primary">
+            Yes
+          </Button>
+          <Button onClick={() => {
+             setToDelete(null);
+          }}>
+            No
+          </Button>
+        </DialogActions>
+      </Dialog>
       <Dialog open={openDialog} onClose={() => setOpenDialog(false)} style={{ margin: 'auto', width: 600, height: 'auto' }}>
         <DialogTitle>{selected.componentName}</DialogTitle>
         <DialogContent>
@@ -179,7 +208,7 @@ const DraggableComponentList = ({ components, onDrag, onSelect, onUpdate }: any)
                       setOpenDialog(true);
                     }}
                     onDeleteClick={() => {
-
+                      setToDelete(index);
                     }} />
                 ))}
                 {provided.placeholder}

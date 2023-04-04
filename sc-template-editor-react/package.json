@@ -6,7 +6,8 @@
     "test": "node spec/ScTemplateEditorReact.spec.ts",
     "create-test": "npx playwright codegen",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "copy": "cp -f dist/sc-template-editor-react.js ../../fieldtec-web/server/public/vendor/custom-component-modules/sc-template-editor-react/index.js"
   },
   "devDependencies": {
     "playwright": "^1.9.1",
@@ -25,6 +26,7 @@
     "css-loader": "^6.7.3",
     "react": "17.0.1",
     "react-ace": "^10.1.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-dnd": "14.0.5",
     "react-dnd-html5-backend": "14.1.0",
     "react-dom": "17.0.1",
