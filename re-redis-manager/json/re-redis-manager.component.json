@@ -1,0 +1,33 @@
+{
+  "systemHeader": {
+      "templateId": "74746c80-8378-11e6-99b1-71ee944cf59f",
+      "systemType": "component",
+      "summaryName": "re-redis-manager"
+  },
+  "documentId": "714a329c-ad6c-4d17-ba35-a6655cae6682",
+  "appTags": [
+      "system",
+      "components",
+      "componentDefinition"
+  ],
+  "name": "re-redis-manager",
+  "versionNumber": "0.0.1",
+  "versionInfo": "Initial version of re-redis-manager component",
+  "vendorLibrariesRel": [
+      {
+          "documentId": "13726f57-e65d-4407-acee-1c304414bfe8",
+          "name": "react",
+          "fileName": "https://unpkg.com/react@17/umd/react.production.min.js"
+      },
+      {
+          "documentId": "8a5455a0-45cd-4926-afbf-53bb79b97e29",
+          "name": "react-dom",
+          "fileName": "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+      },
+      {
+          "documentId": "c2b0ffbb-bbd2-4543-9eba-f96d01e7ca38",
+          "name": "re-redis-manager",
+          "fileName": "https://fileshare.formbird.com/fb/react/re-redis-manager/dist/re-redis-manager.js"
+      }
+  ]
+}

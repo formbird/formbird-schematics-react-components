@@ -1,0 +1,17 @@
+{
+  "systemHeader": {
+      "templateId": "74746c80-8378-11e6-99b1-71ee944cf59f",
+      "systemType": "template",
+      "summaryName": "re-redis-manager test"
+  },
+  "name": "re-redis-manager test",
+  "documentId": "a897c4b6-1f4c-4074-8f6f-e6429d6039c8",
+  "components": [
+      {
+          "label": "Test re-redis-manager",
+          "componentName": "re-redis-manager",
+          "name": "testReRedisManager",
+          "fullWidth": true
+      }
+  ]
+}
