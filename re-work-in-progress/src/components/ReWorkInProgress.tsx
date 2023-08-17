@@ -52,7 +52,7 @@ const ReWorkInProgress = ({
             .filter(item => item.value)
             .sort((item1: any, item2: any) => item2.value.updated - item1.value.updated)
             .map(({ value, key }: any) => {
-            const { document, updated } = value; 
+            const { document, updated, name } = value; 
             if (!document || !updated) {
               return;
             }
@@ -61,7 +61,7 @@ const ReWorkInProgress = ({
               key={value.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
               <TableCell align="left">{updated.toISOString()}</TableCell>
-              <TableCell align="left">{document.systemHeader.summaryName}</TableCell>
+              <TableCell align="left">{name}</TableCell>
               <TableCell align="left">{key.replace('FB-CORE-WIP-', '')}</TableCell>
               <TableCell align="right">
                   <Button startIcon={<Restore />} style={{marginRight: 10 }} variant="outlined" onClick={() => {
